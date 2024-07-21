@@ -1,4 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 import { View } from "react-native";
 import { styles } from "./authStyles";
 import {
@@ -8,7 +9,6 @@ import {
   ThemedTextInput,
 } from "@/components/reusables";
 import { images, COLORS, SIZES, gStyles } from "@/constants";
-import { Link } from "expo-router";
 
 const Signup = () => {
   return (
@@ -25,6 +25,8 @@ const Signup = () => {
           title="CONTINUE"
           style={gStyles.wFull}
           textStyle={styles.buttonText}
+          isLink
+          href="/personalization"
         />
         <ThemedView style={styles.separatorContainer}>
           <View style={styles.separator} />

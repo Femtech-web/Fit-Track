@@ -10,6 +10,7 @@ type GlobalStyles = {
   flexRowCenterJustify: ViewStyle;
   flexRowCenter: ViewStyle;
   flexRowSpace: ViewStyle;
+  flexRowSpaceStart: ViewStyle;
   flex1: ViewStyle;
   flex2: ViewStyle;
   flex3: ViewStyle;
@@ -41,16 +42,23 @@ type GlobalStyles = {
   gap36: TextStyle;
   gap40: TextStyle;
   mB8: ViewStyle;
-  mB10: ViewStyle,
-  mB14: ViewStyle,
-  mB16: ViewStyle,
-  mB20: ViewStyle,
-  mB22: ViewStyle,
+  mB10: ViewStyle;
+  mB14: ViewStyle;
+  mB16: ViewStyle;
+  mB20: ViewStyle;
+  mB22: ViewStyle;
   mB26: ViewStyle;
   mB28: ViewStyle;
   mB30: ViewStyle;
   mB40: ViewStyle;
   mB50: ViewStyle;
+  mB60: ViewStyle;
+  mB70: ViewStyle;
+  mB80: ViewStyle;
+  mB100: ViewStyle;
+  mB120: ViewStyle;
+  mB130: ViewStyle;
+  mB150: ViewStyle;
   mL8: ViewStyle;
   mL16: ViewStyle;
   mR8: ViewStyle;
@@ -66,6 +74,15 @@ type GlobalStyles = {
   mV16: ViewStyle;
   mV24: ViewStyle;
   mV32: ViewStyle;
+  mT40: ViewStyle;
+  mT50: ViewStyle;
+  mT60: ViewStyle;
+  mT70: ViewStyle;
+  mT80: ViewStyle;
+  mT100: ViewStyle;
+  mT120: ViewStyle;
+  mT130: ViewStyle;
+  mT150: ViewStyle;
   p4: ViewStyle;
   p8: ViewStyle;
   p16: ViewStyle;
@@ -74,6 +91,11 @@ type GlobalStyles = {
   pH8: ViewStyle;
   pH16: ViewStyle;
   pH24: ViewStyle;
+  pV4: ViewStyle;
+  pV8: ViewStyle;
+  pV16: ViewStyle;
+  pV24: ViewStyle;
+  pV32: ViewStyle;
   pT8: ViewStyle;
   pT16: ViewStyle;
   pT24: ViewStyle;
@@ -86,6 +108,7 @@ type GlobalStyles = {
   pT150: ViewStyle;
   pT200: ViewStyle;
   textCenter: TextStyle;
+  iconContainer: ViewStyle;
 };
 
 const gStyles: GlobalStyles = {
@@ -117,6 +140,11 @@ const gStyles: GlobalStyles = {
   },
   flexRowSpace: {
     alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  flexRowSpaceStart: {
+    alignItems: 'flex-start',
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
@@ -167,6 +195,13 @@ const gStyles: GlobalStyles = {
   mB30: { marginBottom: 30 },
   mB40: { marginBottom: 40 },
   mB50: { marginBottom: 50 },
+  mB60: { marginBottom: 60 },
+  mB70: { marginBottom: 70 },
+  mB80: { marginBottom: 80 },
+  mB100: { marginBottom: 100 },
+  mB120: { marginBottom: 120 },
+  mB130: { marginBottom: 130 },
+  mB150: { marginBottom: 150 },
   mL8: { marginLeft: 8 },
   mL16: { marginLeft: 16 },
   mR8: { marginRight: 8 },
@@ -178,6 +213,15 @@ const gStyles: GlobalStyles = {
   mT8: { marginTop: 8 },
   mT16: { marginTop: 16 },
   mT32: { marginTop: 32 },
+  mT40: { marginTop: 40 },
+  mT50: { marginTop: 50 },
+  mT60: { marginTop: 60 },
+  mT70: { marginTop: 70 },
+  mT80: { marginTop: 80 },
+  mT100: { marginTop: 100 },
+  mT120: { marginTop: 120 },
+  mT130: { marginTop: 130 },
+  mT150: { marginTop: 150 },
 
   mH24: { marginHorizontal: 24 },
 
@@ -201,12 +245,26 @@ const gStyles: GlobalStyles = {
   pT150: { paddingTop: 150 },
   pT200: { paddingTop: 200 },
 
+  pV4: { paddingVertical: 4 },
+  pV8: { paddingVertical: 8 },
+  pV16: { paddingVertical: 16 },
+  pV24: { paddingVertical: 24 },
+  pV32: { paddingVertical: 32 },
+
   pH4: { paddingHorizontal: 4 },
   pH8: { paddingHorizontal: 8 },
   pH16: { paddingHorizontal: 16 },
   pH24: { paddingHorizontal: 24 },
 
-  textCenter: { textAlign: "center" }
+  textCenter: { textAlign: "center" },
+
+  iconContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 100,
+    height: 100,
+    borderRadius: 100 / 2
+  }
 };
 
 export default gStyles;

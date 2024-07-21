@@ -1,4 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 import { styles } from "./authStyles";
 import {
   ThemedText,
@@ -7,7 +8,6 @@ import {
   ThemedTextInput,
 } from "@/components/reusables";
 import { COLORS, gStyles } from "@/constants";
-import { Link } from "expo-router";
 
 const Signin = () => {
   return (
@@ -29,7 +29,7 @@ const Signin = () => {
           <ThemedText style={styles.switchText}>
             DON’T HAVE AN ACCOUNT? REGISTER
           </ThemedText>
-          <Link href="/signin" style={{ color: COLORS.green800 }}>
+          <Link href="/signup" style={{ color: COLORS.green800 }}>
             REGISTER
           </Link>
         </ThemedView>

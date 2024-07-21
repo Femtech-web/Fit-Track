@@ -1,7 +1,22 @@
 import { StyleSheet } from "react-native";
-import { FONT, SIZES, COLORS } from "@/constants";
+import { FONT, SIZES, COLORS, gStyles } from "@/constants";
 
 export const styles = StyleSheet.create({
+  heading: {
+    fontFamily: FONT.bold,
+    fontSize: SIZES.xLarge,
+    lineHeight: SIZES.xLarge,
+  },
+  homeImage: {
+    width: "100%",
+    height: "48%",
+  },
+  homeButtonText: {
+    fontFamily: FONT.medium,
+    fontSize: SIZES.medium,
+    color: COLORS.white,
+    fontWeight: 600,
+  },
   buttonText: {
     fontFamily: FONT.medium,
     fontSize: SIZES.small,
@@ -37,3 +52,10 @@ export const styles = StyleSheet.create({
     height: 24,
   },
 });
+
+export const logoContainerView = [
+  gStyles.wFull,
+  gStyles.flexRowCenterJustify,
+  gStyles.mV32,
+  gStyles.spacer24,
+];

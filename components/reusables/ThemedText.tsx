@@ -1,5 +1,5 @@
 import { Text, type TextProps, StyleSheet } from "react-native";
-import { SIZES, FONT } from "@/constants";
+import { SIZES, FONT, COLORS } from "@/constants";
 
 export type ThemedTextProps = TextProps & {
   color?: string;
@@ -11,12 +11,17 @@ export type ThemedTextProps = TextProps & {
     | "title4"
     | "defaultSemiBold"
     | "subtitle"
-    | "link";
+    | "link"
+    | "small"
+    | "smallMedium"
+    | "smallBold"
+    | "smaller"
+    | "smallest";
 };
 
 export function ThemedText({
   style,
-  color,
+  color = COLORS.grey500,
   type = "default",
   ...rest
 }: ThemedTextProps) {
@@ -32,6 +37,11 @@ export function ThemedText({
         type === "defaultSemiBold" ? styles.defaultSemiBold : undefined,
         type === "subtitle" ? styles.subtitle : undefined,
         type === "link" ? styles.link : undefined,
+        type === "small" ? styles.small : undefined,
+        type === "smallMedium" ? styles.smallMedium : undefined,
+        type === "smallBold" ? styles.smallBold : undefined,
+        type === "smaller" ? styles.smaller : undefined,
+        type === "smallest" ? styles.smallest : undefined,
         style,
       ]}
       {...rest}
@@ -79,5 +89,25 @@ const styles = StyleSheet.create({
     lineHeight: SIZES.xxLarge,
     fontSize: SIZES.medium,
     color: "#0a7ea4",
+  },
+  small: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.small,
+  },
+  smallMedium: {
+    fontFamily: FONT.medium,
+    fontSize: SIZES.small,
+  },
+  smallBold: {
+    fontFamily: FONT.bold,
+    fontSize: SIZES.small2,
+  },
+  smaller: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.xSmall,
+  },
+  smallest: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.xxSmall,
   },
 });

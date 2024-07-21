@@ -4,6 +4,7 @@ const COLORS = {
 
   green800: "#015B20",
   green400: "#0F973D",
+  green500: "#099137",
   green50: "#E7F6EC",
 
   lightGreen: "#BFFD76",
@@ -36,9 +37,10 @@ const SIZES = {
   xxSmall: 8,
   xSmall: 10,
   small: 12,
+  small2: 14,
   medium: 16,
   large: 20,
-  xLarge: 24,
+  xLarge: 25,
   xxLarge: 32,
   xxxLarge: 64,
 };

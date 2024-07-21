@@ -24,6 +24,8 @@ export type ThemedButtonProps = Omit<ComponentProps<typeof Link>, "href"> & {
   type?: "default" | "primary" | "secondary" | "black" | "outline" | "link";
   textProps?: TextProps;
   icon?: ImageSourcePropType;
+  iconText?: string;
+  iconTextStyle?: TextStyle;
   iconStyle?: ImageStyle;
 };
 
@@ -38,12 +40,15 @@ export function ThemedButton({
   textStyle,
   textProps,
   icon,
+  iconText,
   iconStyle,
+  iconTextStyle,
   ...rest
 }: ThemedButtonProps) {
   const ButtonContent = (
     <View style={styles.content}>
       {icon && <Image source={icon} style={[styles.icon, iconStyle]} />}
+      {iconText && <Text style={[styles.icon, iconTextStyle]}>{iconText}</Text>}
       <Text
         style={[
           type === "link" ? styles.linkText : undefined,

@@ -11,6 +11,7 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "../starter-project/starter-app/components/ThemedText.tsx"
+    "../starter-project/starter-app/components/ThemedText.tsx",
+    "assets/icons/homeIcon.js"
   ]
 }

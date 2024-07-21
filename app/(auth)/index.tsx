@@ -1,24 +1,23 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Redirect } from "expo-router";
+import { Image, TouchableOpacity } from "react-native";
 import { ThemedText, ThemedView, ThemedButton } from "@/components/reusables";
-import { images, COLORS, FONT, SIZES, gStyles } from "@/constants";
+import { images, COLORS, gStyles } from "@/constants";
+import { styles, logoContainerView } from "./authStyles";
 
 const Index = () => {
-  const containerView = [
-    gStyles.wFull,
-    gStyles.flexRowCenterJustify,
-    gStyles.mV32,
-    gStyles.spacer24,
-  ];
+  const isAuthenticated = true;
+
+  if (isAuthenticated) return <Redirect href="/home" />;
 
   return (
-    <SafeAreaView style={gStyles.container}>
+    <SafeAreaView style={[gStyles.container, gStyles.p24]}>
       <Image
         source={images.welcomeImage}
         resizeMode="cover"
-        style={styles.image}
+        style={styles.homeImage}
       />
-      <ThemedView style={containerView}>
+      <ThemedView style={logoContainerView}>
         <ThemedText
           type="title3"
           color={COLORS.green400}
@@ -27,24 +26,19 @@ const Index = () => {
           FITTRACK
         </ThemedText>
       </ThemedView>
-      <ThemedView
-        style={[gStyles.flexCenter, gStyles.pH24, { marginBottom: 70 }]}
-      >
-        <ThemedText
-          color={COLORS.grey500}
-          style={[gStyles.mB8, styles.heading]}
-        >
+      <ThemedView style={[gStyles.flexCenter, { marginBottom: 70 }]}>
+        <ThemedText style={[gStyles.mB8, styles.heading]}>
           Your Fitness Buddy.
         </ThemedText>
         <ThemedText color={COLORS.grey500} style={{ textAlign: "center" }}>
           A new and better way to stay fit. Set, track and share fitness goals
         </ThemedText>
       </ThemedView>
-      <ThemedView style={[gStyles.flexCenter, gStyles.pH24, gStyles.gap20]}>
+      <ThemedView style={[gStyles.flexCenter, gStyles.gap20]}>
         <ThemedButton
           title="I’M NEW HERE!"
           style={{ width: "100%" }}
-          textStyle={styles.buttonText}
+          textStyle={styles.homeButtonText}
           isLink
           href="/signup"
         />
@@ -57,23 +51,5 @@ const Index = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  heading: {
-    fontFamily: FONT.bold,
-    fontSize: SIZES.xLarge,
-    lineHeight: SIZES.xLarge,
-  },
-  image: {
-    width: "100%",
-    height: "48%",
-  },
-  buttonText: {
-    fontFamily: FONT.medium,
-    fontSize: SIZES.medium,
-    color: COLORS.white,
-    fontWeight: 600,
-  },
-});
 
 export default Index;

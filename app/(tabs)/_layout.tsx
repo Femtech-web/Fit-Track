@@ -1,5 +1,5 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { COLORS } from "@/constants";
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { COLORS, FONT, SIZES } from "@/constants";
 import { Tabs } from "expo-router";
 
 export default function TabLayout() {
@@ -8,14 +8,31 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: COLORS.green800,
         headerShown: false,
+        tabBarLabelStyle: {
+          fontFamily: FONT.medium,
+          fontSize: SIZES.medium,
+        },
+        tabBarItemStyle: {
+          gap: 1,
+        },
+        tabBarStyle: {
+          paddingBottom: 10,
+          height: 80,
+        },
+        tabBarIconStyle: {
+          marginBottom: -10,
+        },
       }}
     >
       <Tabs.Screen
         name="home"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="home" color={color} />
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              name="home"
+              stroke={focused ? COLORS.green800 : COLORS.grey300}
+            />
           ),
         }}
       />
@@ -23,8 +40,11 @@ export default function TabLayout() {
         name="goals"
         options={{
           title: "Goals",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              name="goals"
+              stroke={focused ? COLORS.green800 : COLORS.grey300}
+            />
           ),
         }}
       />
@@ -32,8 +52,11 @@ export default function TabLayout() {
         name="feed"
         options={{
           title: "Feed",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              name="feeds"
+              stroke={focused ? COLORS.green800 : COLORS.grey300}
+            />
           ),
         }}
       />
@@ -41,8 +64,11 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              name="settings"
+              stroke={focused ? COLORS.green800 : COLORS.grey300}
+            />
           ),
         }}
       />
