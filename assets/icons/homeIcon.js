@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-function HomeBarIcon({ stroke, size = 20 }) {
+function HomeBarIcon({ stroke, size = 25 }) {
   return (
     <Svg
       width={size}

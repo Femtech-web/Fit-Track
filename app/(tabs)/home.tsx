@@ -1,8 +1,10 @@
 import { ScrollView } from "react-native";
+import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ThemedView, ThemedText, IconContainer } from "@/components/reusables";
+import { ThemedView, ThemedText } from "@/components/reusables";
 import { COLORS, gStyles, icons } from "@/constants";
 import {
+  HeaderIcon,
   MetricBox,
   NewGoalBox,
   UpcomingChallenge,
@@ -11,19 +13,21 @@ import {
 const Home = () => {
   return (
     <SafeAreaView style={[gStyles.container, gStyles.p24, gStyles.pT32]}>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.white },
+          headerLeft: () => (
+            <HeaderIcon icon={<icons.userIcon />} style={{ marginLeft: 24 }} />
+          ),
+          headerRight: () => (
+            <HeaderIcon icon={<icons.bellIcon />} style={{ marginRight: 24 }} />
+          ),
+          headerShadowVisible: false,
+          headerShown: true,
+          headerTitle: "",
+        }}
+      />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <ThemedView style={gStyles.flex1}>
-          <ThemedView
-            style={[gStyles.wFull, gStyles.flexRowSpace, gStyles.mB50]}
-          >
-            <IconContainer backgroundColor={COLORS.green50}>
-              <icons.userIcon />
-            </IconContainer>
-            <IconContainer backgroundColor={COLORS.green50}>
-              <icons.bellIcon />
-            </IconContainer>
-          </ThemedView>
-        </ThemedView>
         <ThemedView style={[gStyles.gap4, gStyles.mB20]}>
           <ThemedText type="title2" color={COLORS.black}>
             Good Morning!

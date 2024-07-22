@@ -7,6 +7,7 @@ const waterBottleImage = require("../assets/images/gym-waterBottle.png");
 const weightLifting = require("../assets/images/weightLifting.png");
 const person = require("../assets/images/person2.png");
 const avatarPlus = require("../assets/images/avatarPlus.png");
+const target = require("../assets/images/target.png");
 
 export default {
   welcomeImage,
@@ -17,5 +18,6 @@ export default {
   waterBottleImage,
   weightLifting,
   person,
-  avatarPlus
+  avatarPlus,
+  target
 };

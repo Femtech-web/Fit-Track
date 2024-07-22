@@ -108,7 +108,7 @@ export function ThemedButton({
 const styles = StyleSheet.create({
   base: {
     borderRadius: SIZES.small,
-    paddingVertical: SIZES.medium,
+    paddingVertical: SIZES.small2,
     paddingHorizontal: SIZES.medium,
     alignItems: "center",
     justifyContent: "center",

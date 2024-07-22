@@ -1,5 +1,5 @@
 import { StyleSheet, ViewStyle, TextStyle } from "react-native";
-import { COLORS } from "./theme";
+import { COLORS, FONT, SIZES } from "./theme";
 
 type GlobalStyles = {
   activeOpacity: number;
@@ -108,7 +108,7 @@ type GlobalStyles = {
   pT150: ViewStyle;
   pT200: ViewStyle;
   textCenter: TextStyle;
-  iconContainer: ViewStyle;
+  btnText: TextStyle;
 };
 
 const gStyles: GlobalStyles = {
@@ -258,12 +258,11 @@ const gStyles: GlobalStyles = {
 
   textCenter: { textAlign: "center" },
 
-  iconContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 100,
-    height: 100,
-    borderRadius: 100 / 2
+  btnText: {
+    fontFamily: FONT.medium,
+    fontSize: SIZES.medium,
+    color: COLORS.white,
+    fontWeight: 600,
   }
 };
 
