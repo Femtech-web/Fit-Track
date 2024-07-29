@@ -1,17 +1,29 @@
 import React from "react";
-import { Image } from "react-native";
-import { ThemedView, ThemedText, ThemedButton } from "@/components/reusables";
-import { COLORS, SIZES, gStyles, images } from "@/constants";
+import { FlatList } from "react-native";
+import { ThemedView, ThemedButton } from "@/components/reusables";
+import { COLORS, SIZES, gStyles } from "@/constants";
+import { IGoal } from "@/app/(tabs)/goals/data";
+import Goal from "./goal";
+import { styles } from "./goalStyles";
 
-const Goals = () => {
+interface IGoals {
+  goals: IGoal[];
+}
+
+const Goals: React.FC<IGoals> = ({ goals }) => {
   return (
-    <ThemedView style={[gStyles.flexCenter, gStyles.flex1]}>
-      <ThemedView
-        style={[gStyles.gap4, gStyles.wFull, gStyles.mB70]}
-      ></ThemedView>
+    <ThemedView style={[gStyles.flex1]}>
+      <ThemedView style={[gStyles.wFull, gStyles.mB70, gStyles.mT8]}>
+        <FlatList
+          data={goals}
+          renderItem={({ item }) => <Goal item={item} />}
+          keyExtractor={(item) => item?.category}
+          contentContainerStyle={{ rowGap: SIZES.xSmall }}
+        />
+      </ThemedView>
       <ThemedButton
         title="Add new goal"
-        style={{ width: "100%" }}
+        style={styles.btn}
         textStyle={gStyles.btnText}
         iconText="+"
         iconTextStyle={{

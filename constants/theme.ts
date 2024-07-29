@@ -2,10 +2,11 @@ const COLORS = {
   primary: "#036B26",
   secondary: "#BFFD76",
 
-  green800: "#015B20",
+  green50: "#E7F6EC",
+  green300: "#40B869",
   green400: "#0F973D",
   green500: "#099137",
-  green50: "#E7F6EC",
+  green800: "#015B20",
 
   lightGreen: "#BFFD76",
   brown: "#FFDAA1",

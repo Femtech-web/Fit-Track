@@ -14,6 +14,8 @@ import whiteShoeIcon from "@/assets/icons/goalIcons/whiteShoe";
 import dressIcon from "@/assets/icons/goalIcons/dress";
 import whiteCalorieIcon from "@/assets/icons/goalIcons/whiteCalorie";
 import strengthIcon from "@/assets/icons/goalIcons/strength";
+import calendarIcon from "@/assets/icons/goalIcons/calendar";
+import arrowDownIcon from "@/assets/icons/goalIcons/arrowDown";
 
 export default {
   homeIcon,
@@ -29,5 +31,7 @@ export default {
   whiteShoeIcon,
   dressIcon,
   whiteCalorieIcon,
-  strengthIcon
+  strengthIcon,
+  calendarIcon,
+  arrowDownIcon
 };
