@@ -5,6 +5,7 @@ export type ThemedTextProps = TextProps & {
   color?: string;
   type?:
     | "default"
+    | "defaultBig"
     | "title"
     | "title2"
     | "title3"
@@ -30,6 +31,7 @@ export function ThemedText({
       style={[
         { color },
         type === "default" ? styles.default : undefined,
+        type === "defaultBig" ? styles.defaultBig : undefined,
         type === "title" ? styles.title : undefined,
         type === "title2" ? styles.title2 : undefined,
         type === "title3" ? styles.title3 : undefined,
@@ -53,6 +55,11 @@ const styles = StyleSheet.create({
   default: {
     fontFamily: FONT.regular,
     fontSize: SIZES.medium,
+    lineHeight: SIZES.large,
+  },
+  defaultBig: {
+    fontFamily: FONT.regular,
+    fontSize: 18,
     lineHeight: SIZES.large,
   },
   defaultSemiBold: {
