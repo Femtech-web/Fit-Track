@@ -6,7 +6,7 @@ import { COLORS, gStyles } from "@/constants";
 import { styles } from "./goalStyles";
 
 interface ICategoryGoal {
-  goal: string | undefined;
+  goal: string;
   icon: React.ReactNode | undefined;
   category: any;
 }

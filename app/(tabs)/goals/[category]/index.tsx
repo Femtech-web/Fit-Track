@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ThemedView, BackHeader } from "@/components/reusables";
-import CategoryGoal from "@/components/goalsScreen/categoryGoal";
+import { CategoryGoal } from "@/components/goalsScreen";
 import { SIZES, gStyles } from "@/constants";
 import { goals as goalsList, IGoal } from "../data";
 
