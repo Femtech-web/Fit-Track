@@ -26,6 +26,8 @@ const Goals: React.FC<IGoals> = ({ goals }) => {
         style={styles.btn}
         textStyle={gStyles.btnText}
         iconText="+"
+        isLink
+        href="/addGoal"
         iconTextStyle={{
           color: COLORS.white,
           fontSize: SIZES.xLarge,

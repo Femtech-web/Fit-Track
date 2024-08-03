@@ -25,6 +25,8 @@ const AddNewGoal = () => {
           style={{ width: "100%" }}
           textStyle={styles.homeButtonText}
           iconText="+"
+          isLink
+          href="/addGoal"
           iconTextStyle={{
             color: COLORS.white,
             fontSize: SIZES.xLarge,

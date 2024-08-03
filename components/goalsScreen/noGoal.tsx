@@ -32,6 +32,8 @@ const NoGoals = () => {
         style={{ width: "100%" }}
         textStyle={gStyles.btnText}
         iconText="+"
+        isLink
+        href="/addGoal"
         iconTextStyle={{
           color: COLORS.white,
           fontSize: SIZES.xLarge,

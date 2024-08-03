@@ -2,6 +2,7 @@ import homeIcon from "@/assets/icons/homeIcon";
 import goalIcon from "@/assets/icons/goalIcon";
 import feedIcon from "@/assets/icons/feedIcon";
 import settingsIcon from "@/assets/icons/settingsIcon";
+import dropdownIcon from "@/assets/icons/dropdownIcon"
 // home icons
 import userIcon from "@/assets/icons/homeIcons/userIcon";
 import bellIcon from "@/assets/icons/homeIcons/bellIcon";
@@ -16,12 +17,16 @@ import whiteCalorieIcon from "@/assets/icons/goalIcons/whiteCalorie";
 import strengthIcon from "@/assets/icons/goalIcons/strength";
 import calendarIcon from "@/assets/icons/goalIcons/calendar";
 import arrowDownIcon from "@/assets/icons/goalIcons/arrowDown";
+// addGoals icons
+import bookIcon from "@/assets/icons/addGoalsIcon/bookIcon";
+import watchIcon from "@/assets/icons/addGoalsIcon/watchIcon";
 
 export default {
   homeIcon,
   goalIcon,
   feedIcon,
   settingsIcon,
+  dropdownIcon,
   userIcon,
   bellIcon,
   shoeIcon,
@@ -33,5 +38,7 @@ export default {
   whiteCalorieIcon,
   strengthIcon,
   calendarIcon,
-  arrowDownIcon
+  arrowDownIcon,
+  bookIcon,
+  watchIcon
 };

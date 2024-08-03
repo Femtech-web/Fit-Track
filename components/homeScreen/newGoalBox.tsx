@@ -2,6 +2,7 @@ import { TouchableOpacity, Image } from "react-native";
 import { ThemedView, ThemedText } from "@/components/reusables";
 import { COLORS, gStyles, icons, images } from "@/constants";
 import { styles } from "./homeStyles";
+import { Link } from "expo-router";
 
 const NewGoalBox = () => {
   return (
@@ -25,14 +26,16 @@ const NewGoalBox = () => {
           But, you don’t have to worry cos that’s easy to fix. Adding a goal is
           the first step to streak city, you should do that.
         </ThemedText>
-        <TouchableOpacity style={[gStyles.flexRow, gStyles.gap6]}>
-          <ThemedText type="title" color={COLORS.green800}>
-            +
-          </ThemedText>
-          <ThemedText type="smallBold" color={COLORS.green800}>
-            CREATE NEW GOAL
-          </ThemedText>
-        </TouchableOpacity>
+        <Link href="/addGoal" asChild style={[gStyles.flexRow, gStyles.gap6]}>
+          <TouchableOpacity>
+            <ThemedText type="title" color={COLORS.green800}>
+              +
+            </ThemedText>
+            <ThemedText type="smallBold" color={COLORS.green800}>
+              CREATE NEW GOAL
+            </ThemedText>
+          </TouchableOpacity>
+        </Link>
       </ThemedView>
       <ThemedView>
         <Image
