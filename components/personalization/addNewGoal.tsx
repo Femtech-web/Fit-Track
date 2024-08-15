@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "expo-router";
 import { ThemedText, ThemedView, ThemedButton } from "@/components/reusables";
 import { TouchableOpacity } from "react-native";
 import { COLORS, SIZES, gStyles } from "@/constants";
@@ -6,6 +7,8 @@ import { styles } from "@/app/(auth)/authStyles";
 import PersonalizationLayout from "./screenLayout";
 
 const AddNewGoal = () => {
+  const router = useRouter();
+
   return (
     <PersonalizationLayout screenHeaderTitle="Almost there!">
       <ThemedText
@@ -32,7 +35,7 @@ const AddNewGoal = () => {
             fontSize: SIZES.xLarge,
           }}
         />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push("/home")}>
           <ThemedText color={COLORS.black}>MAYBE LATER</ThemedText>
         </TouchableOpacity>
       </ThemedView>

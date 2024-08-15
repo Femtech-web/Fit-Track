@@ -10,7 +10,7 @@ export default function TabLayout() {
         headerShown: false,
         tabBarLabelStyle: {
           fontFamily: FONT.medium,
-          fontSize: SIZES.small2,
+          fontSize: 13,
         },
         tabBarItemStyle: {
           gap: 0,
@@ -27,7 +27,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          title: "HOME",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name="home"
@@ -40,7 +40,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="goals"
         options={{
-          title: "Goals",
+          title: "GOALS",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name="goals"
@@ -53,10 +53,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="feed"
         options={{
-          title: "Feed",
+          title: "FEED",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
-              name="feeds"
+              name="feed"
               stroke={focused ? COLORS.green800 : COLORS.grey300}
               focused={focused}
             />
@@ -66,7 +66,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="settings"
         options={{
-          title: "Settings",
+          title: "SETTINGS",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               name="settings"

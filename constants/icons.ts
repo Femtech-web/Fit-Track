@@ -20,6 +20,8 @@ import arrowDownIcon from "@/assets/icons/goalIcons/arrowDown";
 // addGoals icons
 import bookIcon from "@/assets/icons/addGoalsIcon/bookIcon";
 import watchIcon from "@/assets/icons/addGoalsIcon/watchIcon";
+import checkmarkIcon from "@/assets/icons/addGoalsIcon/checkmark";
+import arrowLeftIcon from "@/assets/icons/addGoalsIcon/arrowLeft";
 
 export default {
   homeIcon,
@@ -40,5 +42,7 @@ export default {
   calendarIcon,
   arrowDownIcon,
   bookIcon,
-  watchIcon
+  watchIcon,
+  checkmarkIcon,
+  arrowLeftIcon
 };

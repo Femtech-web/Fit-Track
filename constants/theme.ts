@@ -8,6 +8,7 @@ const COLORS = {
   green400: "#0F973D",
   green500: "#099137",
   green800: "#015B20",
+  green900: "#004617",
 
   lightGreen: "#BFFD76",
   brown: "#FFDAA1",

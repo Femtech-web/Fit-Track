@@ -8,6 +8,9 @@ const weightLifting = require("../assets/images/weightLifting.png");
 const person = require("../assets/images/person2.png");
 const avatarPlus = require("../assets/images/avatarPlus.png");
 const target = require("../assets/images/target.png");
+const avatar = require("../assets/images/avatar.png");
+const reaction = require("../assets/images/reaction.png");
+const message = require("../assets/images/message.png");
 
 export default {
   welcomeImage,
@@ -19,5 +22,8 @@ export default {
   weightLifting,
   person,
   avatarPlus,
-  target
+  target,
+  avatar,
+  reaction,
+  message
 };

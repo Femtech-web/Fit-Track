@@ -22,7 +22,7 @@ export function TabBarIcon({
 }: IconProps) {
   const isHome = name === "home";
   const isGoal = name === "goals";
-  const isFeeds = name === "feeds";
+  const isFeeds = name === "feed";
 
   return (
     <TouchableOpacity
